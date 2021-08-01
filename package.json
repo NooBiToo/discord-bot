@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "discord.js": "^12.5.3",
+    "fs": "^0.0.1-security",
     "reaction-role": "^4.1.1"
   },
   "devDependencies": {}

@@ -1,17 +1,7 @@
 import { ReactionRole } from "reaction-role";
-import Discord from "discord.js";
 
-export function reactionRole(token, client) {
+export function reactionRole(token) {
   const system = new ReactionRole(token);
-
-  // Create an event listener for messages
-  client.on("message", (message) => {
-    // If the message is "ping"
-    if (message.content === "!Макс") {
-      // Send "pong" to the same channel
-      message.channel.send("Черт");
-    }
-  });
 
   // create option with messages
   const option = system.createOption(":eft:869787620018905138", [

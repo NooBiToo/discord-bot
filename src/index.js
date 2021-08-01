@@ -7,13 +7,14 @@ import { commands } from "./modules/commands.js";
 
 const client = new Discord.Client();
 const token = config.token;
+const prefix = config.prefix;
 
 client.on("ready", function () {
   console.log(client.user.username + " запустился!");
 });
 
-reactionRole(token, client);
+reactionRole(token);
 welcome(config, client);
-commands(client);
+commands(prefix, client);
 
 client.login(token);
